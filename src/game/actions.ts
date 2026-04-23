@@ -53,12 +53,12 @@ function withMeta(save: DiceverseSave, run: DiceverseSave["run"]) {
 
 export function getBuyDieCost(save: DiceverseSave) {
   const purchasesSoFar = Math.max(0, save.run.dice.length - 1);
-  return round(10 * 1.5 ** purchasesSoFar);
+  return round(10 * 1.2 ** purchasesSoFar);
 }
 
 export function getLevelUpCost(die: DieState) {
   const withinTierStep = die.faceCap - 3;
-  const baseCost = (die.prestige + 1) * 1.25 ** (withinTierStep + 1);
+  const baseCost = (die.prestige + 1) * 1.15 ** (withinTierStep + 1);
   return round(baseCost);
 }
 
